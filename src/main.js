@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import './registerServiceWorker';
+import './components';
 
-createApp(App).mount('#app');
+createApp(App).mount('#root');

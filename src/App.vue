@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <ButtonVue></ButtonVue>
+    <h1>Props e diretiva</h1>
+    <h2>v-bind, v-if e v-show</h2>
+    <ButtonVbind></ButtonVbind>
+    <p>{{ titulo }}</p>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import ButtonVue from './ButtonVue.vue';
+import ButtonVbind from './ButtonVbind.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    ButtonVue,
+    ButtonVbind,
+  },
+  data() {
+    return {
+      titulo: 'usando vue js 3',
+
+    };
   },
 };
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 100vh;
 }
 </style>
